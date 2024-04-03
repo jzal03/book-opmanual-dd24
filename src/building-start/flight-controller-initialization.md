@@ -334,7 +334,7 @@ We have created a file with the required setup for you, so you will only need to
 
 To do this:
 
-1.  Download [this](https://assets.duckietown.com/robot/duckiedrone/cleanflight_cli_dump.txt) `.txt` configuration file.
+1.  Download [this](https://raw.githubusercontent.com/duckietown/book-course-intro-to-drones/daffy/src/_assets/cleanflight_cli_dump.txt) `.txt` configuration file.
 
 1.  Open it in the notepad app of your base station
 
