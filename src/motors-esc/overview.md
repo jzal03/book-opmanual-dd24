@@ -31,9 +31,9 @@ The motors used are Brushless Direct Current (BLDC) motors. They are a particula
 
 BLDC motors
 
-**black nut** : *counter*-clockwise motors
+**red nut** : *counter*-clockwise motors
 
-**red nut** : clockwise motor
+**black nut** : clockwise motor
 ```
 
 ### Electronic Speed Controller (ESC)
