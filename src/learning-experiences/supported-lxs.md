@@ -18,3 +18,4 @@ Learning experiences for the Duckiedrone are hosted on GitHub. Instructions for 
 - [Duckiedrone's Sensors - Camera](https://github.com/duckietown/duckietown-lx/tree/duckiedrone-lxs/dd21-sensors-camera)
 - [Duckiedrone height PID tuning](https://github.com/duckietown/duckietown-lx/tree/duckiedrone-lxs/dd21-pid-tuning-lx)
 - [Duckiedrone Kalman Filtering](https://github.com/duckietown/duckietown-lx/tree/duckiedrone-lxs/dd21-ukf-lx)
+- [Duckiedrone Localization](https://github.com/duckietown/duckietown-lx/tree/duckiedrone-lxs/dd21-localization-lx)
