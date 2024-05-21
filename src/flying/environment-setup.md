@@ -49,6 +49,7 @@ To make it possible for you to develop your own code on the drone, you need to s
 
 1.  Now that all the packages are installed, to access the workspace you will use to control the drone, run:
     ```shell
+    cd ~/catkin_ws/src/pidrone_pkg
     screen -c pi.screenrc
     ```
 
