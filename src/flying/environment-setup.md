@@ -6,14 +6,19 @@
 
 To make it possible for you to develop your own code on the drone, you need to set up a docker workspace from the source code of the repository `pidrone_pkg`.
 
-1.  Run `ssh duckie@[yourdrone].local` from your base station to ssh into your drone.  The password is
-`quackquack`.
+1.  Run `ssh duckie@[yourdrone].local` from your base station to open an ssh terminal into your drone. All the following commands will have to be input in this shell. The password is `quackquack`.
+
+1. Setup the duckietown stack by executing the following command:
+
+    ```
+    docker-compose -f /data/autoboot/duckiedrone.yaml rm && dt-autoboot
+    ```
 
 1. Clone the repository to your Duckiedrone's SD card and switch to the branch `ente`:
 
     ```shell
     mkdir -p catkin_ws/src && cd catkin_ws/src
-    git clone https://github.com/h2r/pidrone_pkg && cd pidrone_pkg
+    git clone https://github.com/duckietown/pidrone_pkg -b dd24 && cd pidrone_pkg
     ```
 
     ```{note}

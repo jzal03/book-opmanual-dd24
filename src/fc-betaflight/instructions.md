@@ -20,7 +20,7 @@ There are subtle variations between the two Flight Controller versions, **choose
 :::{tab-item} OSD
 If you only have a 3x8 straight pins connector you'll need to solder those rather than the 90° pins.
 
-```{figure} ../_images/fc-cleanflight/flight_controller_ESC_pins_OSD.png
+```{figure} ../_images/fc-betaflight/flight_controller_ESC_pins_OSD.png
 
 3x8 straight ESCs pins soldered
 ```
@@ -31,7 +31,7 @@ If you only have a 3x8 straight pins connector you'll need to solder those rathe
 
 Solder the edge of the 90 degree pins without black plastic to the Flight Controller.
 
-```{figure} ../_images/fc-cleanflight/flight_controller_ESC_pins_ACRO.jpg
+```{figure} ../_images/fc-betaflight/flight_controller_ESC_pins_ACRO.jpg
 
 3x8 90 degrees ESCs pins soldered
 ```
@@ -55,7 +55,7 @@ The battery leads bins have to be soldered on the same side you soldered the ESC
 
 The battery lead pins `VBAT` are in between the ESCs pins and the bottom-left mounting hole of the Flight controller.
 
-```{figure} ../_images/fc-cleanflight/fc_battery_leads_pins_OSD.png
+```{figure} ../_images/fc-betaflight/fc_battery_leads_pins_OSD.png
 
 Solder the battery leads pins to these two pads (they must stick out on the same side as the other pins)
 ```
@@ -67,7 +67,7 @@ Solder the battery leads pins to these two pads (they must stick out on the same
 
 The battery lead pins `VBAT` are right above the bottom-left mounting hole of the Flight controller.
 
-```{figure} ../_images/fc-cleanflight/fc_battery_leads_pins_ACRO.png
+```{figure} ../_images/fc-betaflight/fc_battery_leads_pins_ACRO.png
 
 Battery leads pins soldered
 ```
@@ -80,7 +80,7 @@ Battery leads pins soldered
 Now you will fix the Flight Controller to the Duckiedrone frame. The Flight Controller is located on the bottom side of the Duckiedrone, in the center (his "belly").
 
 
-```{figure} ../_images/fc-cleanflight/drone_front_back.png
+```{figure} ../_images/fc-betaflight/drone_front_back.png
 Identify the front and back of your Duckiedrone
 ```
 
@@ -95,7 +95,7 @@ The axes of the Flight Controller, according to the measurements of linear and a
 ```{attention}
 
 Make sure to orient the arrow on the Flight Controller towards the front side of the Duckiedrone.
-```{image} ../_images/fc-cleanflight/arrow_flight_controller.png
+```{image} ../_images/fc-betaflight/arrow_flight_controller.png
 ```
 
 ```{warning} 
@@ -105,7 +105,7 @@ This is a crucial setting. A mistake here will cause your drone to confuse left/
 To fix the flight controller to the frame use the 4 white M3 Nylon screws:
 
 1.  Insert the bolts **from the front** side of the frame.
-1.  Insert the rubber spacers on the bolt from the bottom side of the frame. ![Rubber spacers on bolt](../_images/fc-cleanflight/bolt_with_spacer.png)
+1.  Insert the rubber spacers on the bolt from the bottom side of the frame. ![Rubber spacers on bolt](../_images/fc-betaflight/bolt_with_spacer.png)
 
 1.  Screw the nuts on the bolts from the bottom side.
 
@@ -117,7 +117,7 @@ The suggested solution is to simply file the nut about 1 mm to have enough clear
 
 In the end your Duckiedrone bottom should look like this:
 
-```{figure} ../_images/fc-cleanflight/flight_controller_attached.png
+```{figure} ../_images/fc-betaflight/flight_controller_attached.png
 
 Flight controller fixed to the bottom of the frame in the correct orientation
 
@@ -134,14 +134,14 @@ We will be connecting the **PWM wires to numbers 1-4** because we have 4 motors.
 ````{attention}
 These numbers on the Flight Controller indicate which PWM wire coming out of the motor should be connected to which set of pins on the flight controller.
 
-```{figure} ../_images/fc-cleanflight/fc_motors_numbering.png
+```{figure} ../_images/fc-betaflight/fc_motors_numbering.png
 
 Motors numbering on the Flight Controller
 ```
 
 For example, in the [image below](motors-numbering), **motor 1 is in the bottom right**; therefore you will take the PWM wire from the ESC connected to the motor in the bottom right of your drone, and connect this to the pins labeled 1 on the flight controller.
 
-```{figure} ../_images/fc-cleanflight/motors_numbering.png
+```{figure} ../_images/fc-betaflight/motors_numbering.png
 :align: center
 :name: motors-numbering
 
@@ -162,7 +162,7 @@ See below on how to connect your Flight Controller version to the ESCs.
 
 Make sure the white wire of the ESC signal wire pair is facing in from the board, and the black wire is facing out.
 
-```{image} ../_images/fc-cleanflight/osd_connected.jpg
+```{image} ../_images/fc-betaflight/osd_connected.jpg
 ```
 
 :::
@@ -171,7 +171,7 @@ Make sure the white wire of the ESC signal wire pair is facing in from the board
 
 Make sure the white wire of the ESC signal wire pair is connected to the top pins, and the black wire is connected to the bottom pins.
 
-```{image} ../_images/fc-cleanflight/acro_connected.jpg
+```{image} ../_images/fc-betaflight/acro_connected.jpg
 ```
 
 :::
@@ -189,21 +189,21 @@ With the ESCs connected to the Flight Controller, your drone's motors can be tes
 
 You will be spinning the motors and you don't want your drone to fly off your desk!
 
-### Launch Cleanflight Configurator
+### Launch Betaflight Configurator
 
-1. Open up Cleanflight Configurator on your base station.
+1. Open up Betaflight Configurator on your base station.
 
 ### Connect your drone
 
 1. Plug your drone's Flight Controller into your base station (via the USB to micro USB cable)
 
-1. Press `"Connect"` in the top right corner of Cleanflight. (You won't need to do this if `"autoconnect"` was selected)
+1. Press `"Connect"` in the top right corner of Betaflight. (You won't need to do this if `"autoconnect"` was selected)
 
 1. Plug the battery into your drone.
 
 ### Navigate to Motors tab
 
-1. Go to the `Motors` tab in Cleanflight. 
+1. Go to the `Motors` tab in Betaflight. 
 2. Read the safety notice and check the box that says `“I understand the risks, propellers are removed - Enable motor control”`.
 
 ### Test each motor
@@ -221,9 +221,9 @@ One way to find out which direction the motor is spinning is to put a piece of t
 ```
 
 ```{attention}
- **DO NOT** follow the incorrect motors diagram. If Cleanflight shows the incorrect motors diagram, then ignore it - the diagram is a UI bug and does not affect the spin directions of the motors.
+ **DO NOT** follow the incorrect motors diagram. If Betaflight shows the incorrect motors diagram, then ignore it - the diagram is a UI bug and does not affect the spin directions of the motors.
 
-```{image} ../_images/fc-cleanflight/motors_spin_direction.png
+```{image} ../_images/fc-betaflight/motors_spin_direction.png
 ```
 
 Repeat this process for all the motors.
@@ -272,15 +272,15 @@ The solution to this problem is to *calibrate* the ESCs with the Flight Controll
 **Make sure no propellers are attached to your drone's motors!** 
 ```
 
-### Launch Cleanflight
+### Launch Betaflight
 
-1. On your base station, open cleanflight
+1. On your base station, open betaflight
 
 1. Connect the Flight Controller to a computer and click "Connect" in the top right of the screen
 
 ### Navigate to Motors tab
 
-1. Go to the **Motors** tab in Cleanflight. 
+1. Go to the **Motors** tab in Betaflight. 
 2. Read the safety notice and check the box that says `“I understand the risks, propellers are removed - Enable motor control”`.
 
 ### Calibrate

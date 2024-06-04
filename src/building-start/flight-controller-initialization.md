@@ -16,24 +16,24 @@
 
 The Flight Controller (FC) implements several low-level behaviors, e.g., stabilizing the Duckiedrone around roll, pitch, and yaw through three different PID controllers. Correctly configuring the Flight Controller is critical for flying safely.  
 
-## Installing Cleanflight Configurator (CFC)
-Cleanflight Configurator is an app that allows the base station to connect directly to the Flight Controller and access its configuration interface.
+## Installing Betaflight Configurator (CFC)
+Betaflight Configurator is an app that allows the base station to connect directly to the Flight Controller and access its configuration interface.
 
 ```{note}
-Cleanflight Configurator used to be a Chrome App, however Chrome Apps' support has been dropped from Google so you will use the native app for your OS.
+Betaflight Configurator used to be a Chrome App, however Chrome Apps' support has been dropped from Google so you will use the native app for your OS.
 ```
 
 Steps:
 
-1.  Download the correct version of Cleanflight Configurator v2.4.0 for your OS from [**this link**](https://github.com/cleanflight/cleanflight-configurator/releases/tag/CLFL_v2.4.0).
+1.  Download the correct version of Betaflight Configurator v2.4.0 for your OS from [**this link**](https://github.com/betaflight/betaflight-configurator/releases/tag/CLFL_v2.4.0).
 
-1. Install Cleanflight Configurator on your system
+1. Install Betaflight Configurator on your system
 
-1. Start Cleanflight Configurator on your base station. You should see the below interface.
+1. Start Betaflight Configurator on your base station. You should see the below interface.
 
     ```{figure} ../_images/software-initialization/CFC_welcome_screen.png
 
-    Cleanflight Configurator (CFC) `welcome screen`
+    Betaflight Configurator (CFC) `welcome screen`
     ```
 
 ## Flashing the correct firmware
@@ -43,7 +43,7 @@ Steps:
 Flight Controllers might have different versions of firmware (i.e., the software that runs on the Flight Controller microcontroller) out of the factory. Normally, this only needs to be done once initially. Follow this procedure to update your firmware.
 
 ```{attention}
-During flashing, do not press the `“Connect”` button in Cleanflight Configurator. 
+During flashing, do not press the `“Connect”` button in Betaflight Configurator. 
 ```
 
 Our current target firmware is: 
@@ -59,10 +59,10 @@ Regardless of the firmware version, if it is the first time setting up the Fligh
 
 Perform the following 2 steps with the Flight Controller **disconnected**.
 
-*   In the default Welcome page of Cleanflight Configurator, in the left sidebar, please click on the `Firmware Flasher` tab 
-    ```{figure} ../_images/software-initialization/cleanflight_flasher.png
+*   In the default Welcome page of Betaflight Configurator, in the left sidebar, please click on the `Firmware Flasher` tab 
+    ```{figure} ../_images/software-initialization/betaflight_flasher.png
 
-    `Firmware Flasher` tab in Cleanflight Configurator
+    `Firmware Flasher` tab in Betaflight Configurator
     ```
 
 *   Configure the options in the tab as below:
@@ -221,7 +221,7 @@ To flash the firmware, we need the Flight Controller to be in `bootloader mode`.
 
 Now that the Flight Controller is in `bootloader mode` you can flash the correct firmware:
 
-1.  In the Cleanflight Configurator Firmware Flasher tab, click the `Load Firmware [Local]` button (bottom right), and select the `.hex` file downloaded at the beginning of this section.
+1.  In the Betaflight Configurator Firmware Flasher tab, click the `Load Firmware [Local]` button (bottom right), and select the `.hex` file downloaded at the beginning of this section.
 
     ```{admonition} Check
     :class: seealso
@@ -284,7 +284,7 @@ To see the whole process for your version of the Flight Controller choose the co
 1. Identify the `"Connect"` button in the top right corner (right now it will be green as the Flight Controller is not connected yet)
     ```{figure} ../_images/software-initialization/CFC_connect_button.png
 
-    `"Connect"` button in the top-right corner of Cleanflight Configurator
+    `"Connect"` button in the top-right corner of Betaflight Configurator
 
 1. Select the correct connection port
 
@@ -306,7 +306,7 @@ To see the whole process for your version of the Flight Controller choose the co
 
 ```{figure} ../_images/software-initialization/CFC_setup_screen.png
 
-Cleanflight Configurator `"Setup"` page
+Betaflight Configurator `"Setup"` page
 ```
 
 ```{attention}
@@ -318,29 +318,29 @@ Please check below that you have the correct versions of both:
 
 ### Checking the firmware version
 
-On the top left of the Cleanflight Configurator interface, one could check for the Firmware version. For example, in the figure below, the firmware version of the Flight Controller is `BTFL 3.3.3`.
+On the top left of the Betaflight Configurator interface, one could check for the Firmware version. For example, in the figure below, the firmware version of the Flight Controller is `BTFL 3.3.3`.
 
-```{figure} ../_images/software-initialization/cleanflight_firmware_version.png
+```{figure} ../_images/software-initialization/betaflight_firmware_version.png
 
-Top left of Cleanflight Configurator, check Cleanflight Configurator version and Flight Controller firmware version here
+Top left of Betaflight Configurator, check Betaflight Configurator version and Flight Controller firmware version here
 ```
 
 ## Restoring the correct settings
 We will restore the correct settings for the Flight Controller that reflect the setup we have on Duckiedrones (i.e. Flight Controller upside down, ESCs communication protocol, etc.)
 
-The settings for the Flight Controller can be saved and restored through the CLI interface of Cleanflight, which is akin to a shell used to interact with the firmware.
+The settings for the Flight Controller can be saved and restored through the CLI interface of Betaflight, which is akin to a shell used to interact with the firmware.
 
-We have created a file with the required setup for you, so you will only need to restore it without having to tweak parameters through the Cleanflight Configurator.
+We have created a file with the required setup for you, so you will only need to restore it without having to tweak parameters through the Betaflight Configurator.
 
 To do this:
 
-1.  Download [this](https://raw.githubusercontent.com/duckietown/book-course-intro-to-drones/daffy/src/_assets/cleanflight_cli_dump.txt) `.txt` configuration file.
+1.  Download [this](https://raw.githubusercontent.com/duckietown/book-course-intro-to-drones/daffy/src/_assets/betaflight_cli_dump.txt) `.txt` configuration file.
 
 1.  Open it in the notepad app of your base station
 
 1.  Copy all content of the file from the notepad by simply clicking on the text and using <kbd>CTRL</kbd> + <kbd>A</kbd> or <kbd>CMD</kbd> + <kbd>A</kbd>
 
-1.  Go in the `CLI` tab of Cleanflight Configurator
+1.  Go in the `CLI` tab of Betaflight Configurator
     ```{figure} ../_images/software-initialization/fc_cli_tab.png
     :width: 300px
 
@@ -385,12 +385,12 @@ It might happen during “Flashing…” or “Verifying…”. Click the `Flash
 ```
 
 ````{trouble}
-On Linux, Cleanflight Configurator doesn't connect to the Flight Controller and an error `Failed to open serial port` appears in the log 
+On Linux, Betaflight Configurator doesn't connect to the Flight Controller and an error `Failed to open serial port` appears in the log 
 ---
 This is a permission issue to access the serial port of the Flight Controller. 
 First try to run `sudo usermod -a -G dialout <USERNAME> `, replacing <USERNAME> with your base station username; this will add your user to the group that has access to the serial ports. **Reboot** for the change to take effect.
 
-If this doesn't work, the quickest solution is to run `sudo chmod 0777 /dev/tty*` while Cleanflight Configurator is open, where `/dev/tty* is the port you're using to connect to the Flight Controller.
+If this doesn't work, the quickest solution is to run `sudo chmod 0777 /dev/tty*` while Betaflight Configurator is open, where `/dev/tty* is the port you're using to connect to the Flight Controller.
 
 This second procedure has to be done each time the Flight Controller is reconnected to the base station.
 
@@ -399,18 +399,18 @@ This second procedure has to be done each time the Flight Controller is reconnec
 
 ```{trouble}
    
-I'm using Ubuntu 22.04 and Cleanflight Configurator does not open nor install.
+I'm using Ubuntu 22.04 and Betaflight Configurator does not open nor install.
 ---
-If that's the case use Cleanflight Configurator v2.6.0 from [here](https://github.com/cleanflight/cleanflight-configurator/releases/tag/CLFL_v2.6.0)
+If that's the case use Betaflight Configurator v2.6.0 from [here](https://github.com/betaflight/betaflight-configurator/releases/tag/CLFL_v2.6.0)
 ```
 
 ```{trouble}
    
-I'm using Ubuntu 22.04 and Cleanflight Configurator freezes when flashing the firmware.
+I'm using Ubuntu 22.04 and Betaflight Configurator freezes when flashing the firmware.
 ---
 Proceed with the following workaround:
 
-1. Open Cleanflight Configurator.
+1. Open Betaflight Configurator.
 2. Go in the `Firmware Flasher` tab.
 3. Select the `Flash on connect` option.
 4. Load the firmware with `Load Firmware [Local]` (the screen will freeze, this is expected).

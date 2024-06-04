@@ -106,7 +106,7 @@ the Flight Controller, ESCs, and motors.
 
 Inside the Raspberry Pi, make sure you can calibrate the accelerometer, and run
 the Flight Controller node.  If those don't work, go back and recheck
-your Cleanflight configuration.
+your Betaflight configuration.
 
 ## Flight Issues
 

@@ -4,12 +4,12 @@ The IMU is embedded in the flight controller and includes a gyroscope and an acc
 
 ```{figure} ../_images/calibrations/sensors-readings-page.png
 
-{bdg-secondary}`Sensors` tab in Cleanflight Configurator showing Gyroscope and Accelerometer readings
+{bdg-secondary}`Sensors` tab in Betaflight Configurator showing Gyroscope and Accelerometer readings
 ```
 
 Calibrating the accelerometer provides the “zero” plane around which the Flight Controller will stabilize the drone during flight, and is a procedure that should be repeated before each flight.
 
-## Method 1: calibration through CleanFlight
+## Method 1: calibration through Betaflight
 
 1.  Connect the Flight Controller to the base station using the micro USB cable.
     
@@ -35,7 +35,7 @@ Calibrating the accelerometer provides the “zero” plane around which the Fli
 Calibration procedure
 ```
 
-Moreover, a message will appear on the top left of the CleanFlight interface saying `Accelerometer calibration finished`.
+Moreover, a message will appear on the top left of the Betaflight interface saying `Accelerometer calibration finished`.
 
 ```{image} ../_images/calibrations/msg_calibration_finished.png
 ```
@@ -67,7 +67,7 @@ The IMU calibration "resets" roll and pitch values to zero, but not the yaw.
 This part is optional and not strictly needed to have stable flight.
 ```
 
-Zeroing the yaw defines the new “forward” direction of the drone, and it can be done through the CleanFlight interface.
+Zeroing the yaw defines the new “forward” direction of the drone, and it can be done through the Betaflight interface.
 
 1.  Connect the Flight Controller
     

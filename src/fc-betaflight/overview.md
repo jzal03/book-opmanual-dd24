@@ -27,7 +27,7 @@ Check [this section](identifying_fc) if you're not sure which version you have.
 The Flight Controller (i.e. Flight Controller) contains multiple sensors: an Inertial Measurement Unit (IMU) and a gyroscope. The IMU measures linear accelerations and the gyroscope measures angular velocities. The Flight Controller also receives commands from the Raspberry Pi and then sends electrical signals to the ESCs which in turn change the speeds of the motors.
 
 ```{attention}
-You should already have installed the correct version of Cleanflight on your Flight Controller.
+You should already have installed the correct version of Betaflight on your Flight Controller.
 ```
 
 ```{seealso}
@@ -90,7 +90,7 @@ This is okay, you should anyways get the needed pins to have the functionality r
 ### USB to Micro USB cable
 This cable is used for two purposes:
 
-1. To configure the Flight Controller settings in CleanFlight
+1. To configure the Flight Controller settings in Betaflight
 
     ```{note}
     This part only needs to be done once. 
@@ -143,7 +143,7 @@ Identify here which type of Flight Controller you have and use the steps corresp
 
 :::{tab-item} OSD
 
-```{figure} ../_images/fc-cleanflight/OSD_identify.png
+```{figure} ../_images/fc-betaflight/OSD_identify.png
 
 OSD version Flight Controller
 ```
@@ -152,7 +152,7 @@ OSD version Flight Controller
 
 *   As highlighted below, the Boot pins are exposed near the `BO` marking.
 
-    ```{image} ../_images/fc-cleanflight/OSD_boot_pins.jpg
+    ```{image} ../_images/fc-betaflight/OSD_boot_pins.jpg
     :align: center
     :width: 500px
     ```
@@ -163,7 +163,7 @@ OSD version Flight Controller
 :::{tab-item} ACRO
 
 
-```{figure} ../_images/fc-cleanflight/ACRO_identify.jpg
+```{figure} ../_images/fc-betaflight/ACRO_identify.jpg
 
 ACRO version Flight Controller
 ```

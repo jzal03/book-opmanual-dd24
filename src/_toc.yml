@@ -37,11 +37,11 @@ parts:
             - file: motors-esc/instructions
             - file: motors-esc/checkpoint
 
-        - file: fc-cleanflight/index
+        - file: fc-betaflight/index
           sections:
-            - file: fc-cleanflight/overview
-            - file: fc-cleanflight/instructions
-            - file: fc-cleanflight/checkpoint
+            - file: fc-betaflight/overview
+            - file: fc-betaflight/instructions
+            - file: fc-betaflight/checkpoint
 
         - file: camera-prop-mount/index
           sections:
@@ -64,7 +64,7 @@ parts:
       chapters:
           - file: flying/environment-setup
           - file: flying/flying-your-drone
-          - file: flying/cleanflight-pid-settings
+          - file: flying/betaflight-pid-settings
           - file: flying/diagnostic
 
     - caption: Learning Experiences

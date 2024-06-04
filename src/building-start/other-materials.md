@@ -13,7 +13,7 @@ At this time, it is not possible to flash your SD card on a Chromebook. You will
 
 Additionally, you will need to install the following software on your base station.
 
-1. *Cleanflight Configurator*. This is an application that will allow you to set up your Flight Controller.
+1. *Betaflight Configurator*. This is an application that will allow you to set up your Flight Controller.
 
     ```{note}
     You will install this later in the manual.

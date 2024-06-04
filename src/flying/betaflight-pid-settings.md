@@ -1,4 +1,4 @@
-(cleanflight-pid-settings)=
+(betaflight-pid-settings)=
 
 # Flight Controller PID Tuning
 
@@ -33,18 +33,18 @@ The Flight Controller (FC) runs high-frequency control loops to stabilize the dr
 Primarily, a **proportional–integral–derivative controller** ([PID controller](https://en.wikipedia.org/wiki/PID_controller)) is used on the FC to achieve these. Here are some materials helping explain the influence of `P`, `I` and `D` terms, in the context of drones, and how should they be tuned based on the behaviors of the drone.
 
 * [FPV Drone PID Explaned by Oscar Liang](https://oscarliang.com/pid/)
-* [CleanFlight PID Tuning on OpenTXU by John Case](http://open-txu.org/home/special-interests/multirotor/cleanflight-pid-tuning/)
+* [Betaflight PID Tuning on OpenTXU by John Case](http://open-txu.org/home/special-interests/multirotor/betaflight-pid-tuning/)
 * [A video on recognition of PID problems.](https://www.youtube.com/watch?v=YNzqTGEl2xQ) It is not necessary to use the string method to tune a Duckiedrone, but the behaviors are also clearly presented in that part, when certain parameters are far from good values.
 
 ## Setting your PID values
 
-### How to update in CleanFlight
+### How to update in Betaflight
 
 ```{figure} ../_images/fc-pid-setting/FC_PID_starter.png
 :width: 100%
 :name: fig-fc-pid-setting-fc-pid-starter
 
-GUI tab in CleanFlight to set the PID values (with recommended starter values)
+GUI tab in Betaflight to set the PID values (with recommended starter values)
 ```
 
 As shown in {numref}`fig-fc-pid-setting-fc-pid-starter`, here is how to set the PID values:
@@ -74,4 +74,4 @@ In your own PID tuning process, you should only change the `P`, `I` and `D` on R
 After apply the recommended starter values, with the knowledge from the previous subsection, you can keep trying the following for improving the basic manual performance of your Duckiedrone:
 
 * Flying the drone manually and look out for erroneous behaviors
-* Connect the FC to CleanFlight, and adapt the PID values
+* Connect the FC to Betaflight, and adapt the PID values
