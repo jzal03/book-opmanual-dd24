@@ -4,11 +4,11 @@
 
 ```{needget}
 
-* A fully operational `DD21`
+* A fully operational `DD24`
 
 ---
 
-* A `DD21` that flies stably and responsively in manual mode
+* A `DD24` that flies stably and responsively in manual mode
 
 ```
 

@@ -19,9 +19,7 @@ Additionally, you will need to install the following software on your base stati
     You will install this later in the manual.
     ```
 
-1. Google Chrome is recommended
-
-1. [USB to UART driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers). (**macOS and Windows only**) Download the correct driver for your OS. You will not need this driver if you are using a Chromebook or Linux, you will be able to connect to the flight controller without it.
+1. [Balena Etcher](https://etcher.balena.io/#download-etcher)
 
 ## Soldering Tools
 

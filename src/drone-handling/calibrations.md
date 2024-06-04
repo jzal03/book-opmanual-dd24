@@ -53,7 +53,7 @@ The same result as above can be obtained by connecting to the Dashboard instead 
     
 4.  In the top right corner of this block, find and click on the {bdg-secondary-line}`Calibrate IMU` button.
     
-    * The data streaming will freeze for a few seconds while the calibration is undergoing, and it will resume once the calibration is complete.
+    * The data stream will freeze for a few seconds while the calibration is undergoing, and it will resume once the calibration is complete.
         
 ```{figure} ../_images/calibrations/drone-IMU-calibration-dashboard.gif
 

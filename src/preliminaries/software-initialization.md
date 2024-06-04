@@ -15,7 +15,7 @@
 
 ```{admonition} What you will get
 
-* A DD21 initialized and customized micro SD card
+* A DD24 initialized and customized micro SD card
 ```
 
 ## Flashing the SD card
@@ -26,11 +26,11 @@ In this section you will install the Duckiedrone software on the microSD card.
 
 1. If you have not already, on a base station, download the latest drone image:
 
-    ```{button-link} https://duckietown-public-storage.s3.amazonaws.com/brown/disk_image/dt-amelia-DD21-brown2022-sd-card-v12.zip
+    ```{button-link} https://duckietown-public-storage.s3.amazonaws.com/brown/disk_image/dt-amelia-DD24-brown2022-sd-card-v16.zip
     :color: primary
     :shadow:
     
-    DD21 system image
+    DD24 system image
     ```
 
 1. Connect the micro SD card to the base station. Use the micro SD to USB card reader if the base station does not have a micro SD port.

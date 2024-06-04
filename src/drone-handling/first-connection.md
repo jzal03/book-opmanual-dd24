@@ -5,13 +5,13 @@ You are now ready to connect to your Duckiedrone through the Duckietown Dashboar
 
 ```{needget}
 
-*   A live `DD21` ([First Boot](sec:first-boot))
+*   A live `DD24` ([First Boot](sec:first-boot))
 
 *   A base station with wireless connectivity, or a pre-existing network
 
 ---
 
-*   A fully operational `DD21`
+*   A fully operational `DD24`
 
 ```
 
@@ -21,19 +21,19 @@ Make sure you are on the same network as your Duckiedrone:
     
 ::::{tab-set}
 
-:::{tab-item} Access Point (AP) mode
-
-Connect to `duckietown-<hostname>-ap` if the drone is in AP mode, where `<hostname>` is the robot name chosen during the initialization procedure.
-
-If you forgot to change it, the default hostname is `amelia`.
-
-:::
-
 :::{tab-item} Client (CL) mode
 
 Connect to the same network that the drone is connected to if the drone is in CL mode.
 
 The default network is `duckietown` (password: `quackquack`)  
+
+:::
+
+:::{tab-item} Access Point (AP) mode
+
+Connect to `duckietown-<hostname>-ap` if the drone is in AP mode, where `<hostname>` is the robot name chosen during the initialization procedure.
+
+If you forgot to change it, the default hostname is `amelia`.
 
 :::
 
