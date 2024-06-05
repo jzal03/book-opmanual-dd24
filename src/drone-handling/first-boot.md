@@ -40,7 +40,7 @@ Do not interrupt the first boot procedure, e.g., by removing power to the Raspbe
     
 2.  Make sure you have a wall adapter or fully charged battery available.  
     
-3.  Networks are typically one of the biggest headaches in robotics. We offer different network configurations to minimize these headaches. If you are not sure which choice to make, the right answer typically is: if you are in a university go for AP mode. If you are at home go for CL mode. In both cases, you need to place the jumper accordingly on your `5` & `6` pins before getting started.  
+3.  Networks are typically one of the biggest headaches in robotics. We offer different network configurations to minimize these headaches. If you are not sure which choice to make, the right answer typically is: if you are in a university go for AP mode. If you are at home go for CL mode. In both cases, you need to place the jumper accordingly on your `P7` & `P11` pins before getting started.  
     
     ```{todo}
     Ditch this warning and update the images for DD24.
@@ -62,16 +62,16 @@ Do not interrupt the first boot procedure, e.g., by removing power to the Raspbe
         * requires admin access to a pre-existing network in your space.  
     
     3.  How to:
-        * __do not__ short pins `5` & `6` on the breadboard by __not__ using the provided jumper.
+        * __do not__ short pins `P7` & `P11` on the breadboard by __not__ using the provided jumper.
 
         ```{tip}
         Keep the jumper on _one_ pin to avoid misplacing and losing it!
         ```
 
-        ```{figure} ../_images/first-boot/wifi_pins_not_shorted.png
+        ```{figure} ../_images/first-boot/wifi_pins_not_shorted.jpg
         :width: 500px
 
-        Pins `5` & `6` not shorted.
+        Pins `P7` & `P11` not shorted.
         ```
     :::
 
@@ -89,12 +89,12 @@ Do not interrupt the first boot procedure, e.g., by removing power to the Raspbe
                 
     3.  How to:
 
-        * __short__ pins `5` & `6` on the breadboard by using the provided jumper.
+        * __short__ pins `P7` & `P11` on the breadboard by using the provided jumper.
         
-        ```{figure} ../_images/first-boot/wifi_pins_shorted.png
+        ```{figure} ../_images/first-boot/wifi_pins_shorted.jpg
         :width: 500px
         
-        Pins `5` & `6` shorted.
+        Pins `P7` & `P11` shorted.
         ```
     
     :::
@@ -160,7 +160,7 @@ Congratulations, you are now ready to connect to your Duckiedrone for the first 
 
 
 :::{trouble}
-I disconnected my `5` & `6` pins but cannot see my robot on the network.
+I disconnected my `P7` & `P11` pins but cannot see my robot on the network.
 ---
 Sometimes things go awry during the first boot. It is possible that the Wi-Fi detection container times out. Search for a `duckietown-hostname-ap` network instead. Reboot the Duckiedrone (with disconnected pins) to have it join the configured existing network.
 :::
