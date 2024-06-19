@@ -35,7 +35,7 @@ To make it possible for you to develop your own code on the drone, you need to s
 
     ```shell
     cd ~/catkin_ws/src/
-    git clone https://github.com/UbiquityRobotics/raspicam_node 
+    git clone https://github.com/duckietown/raspicam_node -b kinetic-dd24
     ```
 
 1.  You can start the container and go inside it by running, from the `pidrone_pkg` directory:
