@@ -5,13 +5,13 @@ There is only one first time you can connect to your Duckiedrone. Savor the expe
 
 ```{needget}
 
-*   An assembled `DD21`
+*   An assembled `DD24`
 
-*   A `DD21` initialized SD card, see [](sw-initialization)
+*   A `DD24` initialized SD card, see [](sw-initialization)
 ---
 
 
-*   A live `DD21`
+*   A live `DD24`
 ```
 
 ## Before getting started
@@ -40,9 +40,41 @@ Do not interrupt the first boot procedure, e.g., by removing power to the Raspbe
     
 2.  Make sure you have a wall adapter or fully charged battery available.  
     
-3.  Networks are typically one of the biggest headaches in robotics. We offer different network configurations to minimize these headaches. If you are not sure which choice to make, the right answer typically is: if you are in a university go for AP mode. If you are at home go for CL mode. In both cases, you need to place the jumper accordingly on your `5` & `6` pins before getting started.  
+3.  Networks are typically one of the biggest headaches in robotics. We offer different network configurations to minimize these headaches. If you are not sure which choice to make, the right answer typically is: if you are in a university go for AP mode. If you are at home go for CL mode. In both cases, you need to place the jumper accordingly on your `P7` & `P11` pins before getting started.  
     
+    ```{todo}
+    Ditch this warning and update the images for DD24.
+    ```
+    ```{attention}
+    At present AP mode is unstable, we suggest you to use CL mode.
+    ```
+
     ::::{tab-set}
+
+    :::{tab-item} Client (CL) mode      
+    
+    If you want to have the drone connect to an existing local area network. This is the go-to choice if you have an existing network and admin powers to it in the environment where you are operating.  
+
+    1.  Pros:
+        * both your base station and your drone can talk with each other (and other devices on the network), and to the internet.  
+
+    2.  Cons:
+        * requires admin access to a pre-existing network in your space.  
+    
+    3.  How to:
+        * __do not__ short pins `P7` & `P11` on the breadboard by __not__ using the provided jumper.
+
+        ```{tip}
+        Keep the jumper on _one_ pin to avoid misplacing and losing it!
+        ```
+
+        ```{figure} ../_images/first-boot/wifi_pins_not_shorted.jpg
+        :width: 500px
+
+        Pins `P7` & `P11` not shorted.
+        ```
+    :::
+
     :::{tab-item} Access point (AP) mode
     
     If you want to have the drone emit its own Wi-Fi network that your base station can connect to. This is the go-to choice if you do not have a network (WLAN) or admin access to the existing network where you are operating.  
@@ -57,40 +89,15 @@ Do not interrupt the first boot procedure, e.g., by removing power to the Raspbe
                 
     3.  How to:
 
-        * __short__ pins `5` & `6` on the breadboard by using the provided jumper.
+        * __short__ pins `P7` & `P11` on the breadboard by using the provided jumper.
         
-        ```{figure} ../_images/first-boot/wifi_pins_shorted.png
+        ```{figure} ../_images/first-boot/wifi_pins_shorted.jpg
         :width: 500px
         
-        Pins `5` & `6` shorted.
+        Pins `P7` & `P11` shorted.
         ```
     
     :::
-
-    :::{tab-item} Client (CL) mode      
-    
-    If you want to have the drone connect to an existing local area network. This is the go-to choice if you have an existing network and admin powers to it in the environment where you are operating.  
-
-    1.  Pros:
-        * both your base station and your drone can talk with each other (and other devices on the network), and to the internet.  
-
-    2.  Cons:
-        * requires admin access to a pre-existing network in your space.  
-    
-    3.  How to:
-        * __do not__ short pins `5` & `6` on the breadboard by __not__ using the provided jumper.
-
-        ```{tip}
-        Keep the jumper on _one_ pin to avoid misplacing and losing it!
-        ```
-
-        ```{figure} ../_images/first-boot/wifi_pins_not_shorted.png
-        :width: 500px
-
-        Pins `5` & `6` not shorted.
-        ```
-    :::
-    
     ::::
 
 4.  If you haven't already, insert the initialized micro SD card inside the micro SD card slot of the Raspberry Pi, as shown [here](attach_pi_hat).
@@ -113,16 +120,6 @@ Do not interrupt the first boot procedure, e.g., by removing power to the Raspbe
 6.  Wait until the first boot sequence is complete:
 
     ::::{tab-set}
-    :::{tab-item} Access point (AP) mode
-    
-    Scan available networks through the base station: once the booting procedure is complete you will find a network called `duckietown-<hostname>-ap`, where `<hostname>` is the name of the robot, as determined during the initialization procedure. The default name is `amelia`.
-
-    ```{image} ../_images/first-boot/drone_wifi_ap.png
-    :width: 300px
-    ```
- 
-    
-    :::
 
     :::{tab-item} Client (CL) mode      
     
@@ -145,6 +142,17 @@ Do not interrupt the first boot procedure, e.g., by removing power to the Raspbe
 
     :::
     
+    :::{tab-item} Access point (AP) mode
+    
+    Scan available networks through the base station: once the booting procedure is complete you will find a network called `duckietown-<hostname>-ap`, where `<hostname>` is the name of the robot, as determined during the initialization procedure. The default name is `amelia`.
+
+    ```{image} ../_images/first-boot/drone_wifi_ap.png
+    :width: 300px
+    ```
+ 
+    
+    :::
+
     ::::
 
 
@@ -152,7 +160,7 @@ Congratulations, you are now ready to connect to your Duckiedrone for the first 
 
 
 :::{trouble}
-I disconnected my `5` & `6` pins but cannot see my robot on the network.
+I disconnected my `P7` & `P11` pins but cannot see my robot on the network.
 ---
 Sometimes things go awry during the first boot. It is possible that the Wi-Fi detection container times out. Search for a `duckietown-hostname-ap` network instead. Reboot the Duckiedrone (with disconnected pins) to have it join the configured existing network.
 :::

@@ -106,7 +106,7 @@ the Flight Controller, ESCs, and motors.
 
 Inside the Raspberry Pi, make sure you can calibrate the accelerometer, and run
 the Flight Controller node.  If those don't work, go back and recheck
-your Cleanflight configuration.
+your Betaflight configuration.
 
 ## Flight Issues
 
@@ -116,7 +116,7 @@ Make sure that:
 
 * your camera is mounted firmly, pointed downwards.
 * the range sensor is pointed downwards and hasn't gotten rotated.
-* the Flight Controller board is level and firmly attached, or the IMU and gyroscope will return incorrect readings.
+* the Flight Controller board is level and firmly attached, else the IMU and gyroscope will return incorrect readings.
 * each propeller is tightened down all the way.
 
 Any of these issues could cause poor flight behavior.

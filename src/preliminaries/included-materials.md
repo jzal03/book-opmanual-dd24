@@ -1,5 +1,9 @@
 # Included materials
 
+```{todo}
+Update this image when the pictures from the manufacturer come in.
+```
+
 ```{figure} ../_images/the-box.jpg
 :name: the-box
 :align: left
@@ -14,4 +18,4 @@ The *yellow* box
 What's inside the box
 ```
 
-In the picture there are all materials included in the Duckietown kit. A more detailed overview of each item is given in the *Overview* chapter of each assembly section.
+In the picture there are all materials included in the Duckietown kit.

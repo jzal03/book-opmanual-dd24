@@ -8,47 +8,19 @@ parts:
       maxdepth: 2
       numbered: False
       chapters:
-        - file: building-start/safety
-        - file: building-start/prerequisites
-        - file: building-start/multimeters
-        - file: building-start/included-materials
-        - file: building-start/other-materials
-        - file: building-start/software-initialization
-        - file: building-start/flight-controller-initialization
+        - file: preliminaries/safety
+        - file: preliminaries/prerequisites
+        - file: preliminaries/multimeters
+        - file: preliminaries/included-materials
+        - file: preliminaries/other-materials
+        - file: preliminaries/software-initialization
+        - file: preliminaries/flight-controller-initialization
+        - file: preliminaries/flying-your-drone
 
-    - caption: Hardware build DD21
-      maxdepth: 2
-      numbered: False
-      chapters:
-        - file: rpi-power/index.md
-          sections:
-            - file: rpi-power/overview
-            - file: rpi-power/instructions
-            
-        - file: tof-sensor/index
-          sections:
-            - file: tof-sensor/overview
-            - file: tof-sensor/instructions
-            - file: tof-sensor/checkpoint
+    # - caption: Hardware build DD24
+    #   maxdepth: 2
+    #   numbered: False
 
-        - file: motors-esc/index
-          sections:
-            - file: motors-esc/overview
-            - file: motors-esc/instructions
-            - file: motors-esc/checkpoint
-
-        - file: fc-cleanflight/index
-          sections:
-            - file: fc-cleanflight/overview
-            - file: fc-cleanflight/instructions
-            - file: fc-cleanflight/checkpoint
-
-        - file: camera-prop-mount/index
-          sections:
-            - file: camera-prop-mount/overview
-            - file: camera-prop-mount/instructions
-            - file: camera-prop-mount/checkpoint
-        
     - caption: Drone handling
       maxdepth: 2
       numbered: False
@@ -63,8 +35,7 @@ parts:
       numbered: False
       chapters:
           - file: flying/environment-setup
-          - file: flying/flying-your-drone
-          - file: flying/cleanflight-pid-settings
+          - file: flying/betaflight-pid-settings
           - file: flying/diagnostic
 
     - caption: Learning Experiences
