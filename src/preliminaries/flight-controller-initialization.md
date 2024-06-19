@@ -203,15 +203,40 @@ To do this:
 
 The Flight Controller will now reboot and reconnect.
 
-```{todo}
-Update check
+
+(fc_initialization_motors_spin_direction)=
+## Configuring motors spin direction
+
+```{warning}
+Remove the propellers before attempting this procedure.
 ```
 
-```{admonition} Check
-:class: seealso
+This section provides information on how to set the spin direction for the motors:
 
-In the `setup` tab check that the drone now results facing up when the side of the Flight Controller with the chips faces downward.
-```
+1. Go to the `Motors` tab and click on the `Motor direction` button.
+
+    ```{figure} ../_images/fc-initialization/bfc-motors-tab.png
+    :width: 300px
+
+    `motors` tab
+    ```
+
+1. Read the wizard than opens, toggle the option saying `I understand the risks` and click the button `Individually`.
+
+    ```{figure} ../_images/fc-initialization/bfc-motors-direction-1.png
+    :width: 300px
+
+    Motors direction wizard
+    ```
+
+1. The wizard will change to show you the different motors of the drone and after clicking on one you will be able to select whether to have it spin in the normal direction or to reverse it. Do this for each one of the 4 motors, then click `Close`.
+
+    ```{figure} ../_images/fc-initialization/bfc-motors-direction-2.png
+    :width: 300px
+
+    Motors direction wizard
+    ```
+1. Click on the `Save and Reboot` button to save the changes and reboot the flight controller.
 
 (fc_initialization_troubleshooting)=
 ## Troubleshooting
