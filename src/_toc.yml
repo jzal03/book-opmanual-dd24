@@ -15,6 +15,7 @@ parts:
         - file: preliminaries/other-materials
         - file: preliminaries/software-initialization
         - file: preliminaries/flight-controller-initialization
+        - file: preliminaries/flying-your-drone
 
     # - caption: Hardware build DD24
     #   maxdepth: 2
@@ -34,7 +35,6 @@ parts:
       numbered: False
       chapters:
           - file: flying/environment-setup
-          - file: flying/flying-your-drone
           - file: flying/betaflight-pid-settings
           - file: flying/diagnostic
 
