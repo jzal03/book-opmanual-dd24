@@ -166,7 +166,7 @@ The motors on the drone do not spin when armed on the web interface
 
 ---
 
-Plug the USB into a computer with Cleanflight Configurator and verify the following settings in Cleanflight:
+Plug the USB into a computer with Betaflight Configurator and verify the following settings in Betaflight:
 
 - the yaw is flipped 180 degrees in the `"Configuration"` tab
 
@@ -184,7 +184,7 @@ The drone does not get off the ground when commanded to takeoff.
 
 - make sure that the arrows on the props are in the correct direction
 
-- Take off the propellers from your motors and plug the battery into your drone. In Cleanflight Configurator, navigate to the motors tab, click `"I agree to the risks"`, and try to spin up each motor. Make sure that each motor spins in the correct direction.
+- Take off the propellers from your motors and plug the battery into your drone. In Betaflight Configurator, navigate to the motors tab, click `"I agree to the risks"`, and try to spin up each motor. Make sure that each motor spins in the correct direction.
 
 - Make sure that when you spin up motor 1, the correct motor spins (the bottom right). Do this for all of the motors.
 ```

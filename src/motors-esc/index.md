@@ -1,3 +1,0 @@
-# Motors and ESCs
-```{tableofcontents}
-```
