@@ -16,6 +16,11 @@ You are now ready to connect to your Duckiedrone through the Duckietown Dashboar
 ```
 
 
+```{todo}
+absolute URL in needget box above
+```
+
+
 ## Connecting to the Duckiedrone  
 Make sure you are on the same network as your Duckiedrone:
     
