@@ -17,9 +17,11 @@ parts:
         - file: preliminaries/flight-controller-initialization
         - file: preliminaries/flying-your-drone
 
-    # - caption: Hardware build DD24
-    #   maxdepth: 2
-    #   numbered: False
+    - caption: Hardware build DD24
+      maxdepth: 2
+      numbered: False
+      chapters:
+          - file: hw_assembly/index
 
     - caption: Drone handling
       maxdepth: 2
