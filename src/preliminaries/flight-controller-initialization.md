@@ -238,6 +238,42 @@ This section provides information on how to set the spin direction for the motor
     ```
 1. Click on the `Save and Reboot` button to save the changes and reboot the flight controller.
 
+(fc_initialization_esc_configuration)=
+## Configuring ESCs functionalities
+
+The ESCs used by the Flight Controller of the DD24 (SpeedyBee f405v3) use the `BLHeli_S` firmware. By default they have a functionality that produces a beep sound after 10 minutes of not receiving any commands. This can be annoying so you can disable it using the esc-configurator web tool https://esc-configurator.com/  .
+
+```{attention}
+You need to connect the battery in order to program the ESCs.
+```
+
+```{note}
+You need to use a Chrome-based browser (Google Chrome, Microsoft Edge, etc.) for this.
+```
+
+1. Connect the battery to the ESC board. (The ESC board cannot be powered by the flight controller, it needs its own power supply).
+
+1. Open Google Chrome and navigate to the esc-configurator web tool: [ESC-Configurator](https://esc-configurator.com/)
+
+1. Click on `Select Serial Port` in the top-right corner. A prompt will be shown to let you choose the serial port, use the same you have used to connect to the flight controller and click `Connect`.
+
+    ```{figure} ../_images/fc-initialization/esc-config-serial-port-selection.png
+    :width: 300px
+
+    Serial port selection prompt.
+    ```
+
+1. If the connection is successfull you will see the following screen. In the `Beacon Delay` drop down menu select `Infinite`.
+
+    ```{figure} ../_images/fc-initialization/esc-config-disable-beacon.png
+    :width: 300px
+
+    Set `Beacon Delay` to `Infinite` to disable the beacon sound.
+    ```
+
+1. Click the `Write Settings` button in the bottom-right corner in order to save the settings.
+
+
 (fc_initialization_troubleshooting)=
 ## Troubleshooting
 
