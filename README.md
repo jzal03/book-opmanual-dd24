@@ -1,37 +1,27 @@
-# Template: template-book
+# Book opmanual DD24
 
-This template provides a boilerplate repository for books in Duckietown.
+Welcome to the opmanual DD24 book! This book serves as a comprehensive guide to operating the Duckiedrone DD24 robot.
 
+## Contributing to the documentation
 
-## What to change
+To get started contributing to this book, follow these steps:
 
-These are the fields you **must** update to create your book.
+1. Clone the repository to your local machine.
+1. Customize the structure of your book by modifying provided in `src/_toc.yml`.
+1. Learn how to contribute to the content of the books on [the Book Writer manual](https://staging-docs.duckietown.com/ente/devmanual-docs/intro.html)
 
+## Building the Book
 
-### Placeholders in `src/_config.yml`
-
-This file configures the build of the book.
-Replace the placeholder string `BOOK_NAME_HERE` (there should be three separate instances of it) with
-the name of the repository hosting your book (e.g., `book-devmanual-docs`).
-
-
-### Structure in `src/_toc.yml`
-
-Use the instructions [here](https://jupyterbook.org/en/stable/structure/toc.html#structure-of-a-book)
-to learn how to structure your book using the Table of Contents file `_toc.yml`.
-A simple example is already provided by this template. Adapt it to your needs.
-
-
-### Logo in `src/logo.png`
-
-There is a default logo in `src/logo.png`. This is the book's logo, change it with something that 
-reflects the scope of your book. Transparent PNGs are recommended.
-
-
-## Build
-
-You can build this book by running the command,
+To build this book, run the following command:
 
 ```shell
 dts docs build
 ```
+
+This command will generate the HTML version of the book, which can be accessed in the `build/html` directory.
+
+## Contributing
+
+If you want your changes to be included in the book, open a pull request.
+
+We appreciate your contributions and feedback!

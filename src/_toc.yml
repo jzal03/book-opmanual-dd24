@@ -50,5 +50,6 @@ parts:
       numbered: False
       chapters:
           - file: software-architecture/introduction
+          - file: software-architecture/reference-frames
           - file: software-architecture/ros
           - file: software-architecture/nodes
