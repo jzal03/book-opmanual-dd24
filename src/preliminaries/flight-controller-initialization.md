@@ -216,7 +216,6 @@ This section provides information on how to set the spin direction for the motor
 1. Go to the `Motors` tab and click on the `Motor direction` button.
 
     ```{figure} ../_images/fc-initialization/bfc-motors-tab.png
-    :width: 300px
 
     `motors` tab
     ```
@@ -224,7 +223,7 @@ This section provides information on how to set the spin direction for the motor
 1. Read the wizard than opens, toggle the option saying `I understand the risks` and click the button `Individually`.
 
     ```{figure} ../_images/fc-initialization/bfc-motors-direction-1.png
-    :width: 300px
+    :width: 500px
 
     Motors direction wizard
     ```
@@ -232,7 +231,6 @@ This section provides information on how to set the spin direction for the motor
 1. The wizard will change to show you the different motors of the drone and after clicking on one you will be able to select whether to have it spin in the normal direction or to reverse it. Do this for each one of the 4 motors, then click `Close`.
 
     ```{figure} ../_images/fc-initialization/bfc-motors-direction-2.png
-    :width: 300px
 
     Motors direction wizard
     ```
@@ -258,7 +256,6 @@ You need to use a Chrome-based browser (Google Chrome, Microsoft Edge, etc.) for
 1. Click on `Select Serial Port` in the top-right corner. A prompt will be shown to let you choose the serial port, use the same you have used to connect to the flight controller and click `Connect`.
 
     ```{figure} ../_images/fc-initialization/esc-config-serial-port-selection.png
-    :width: 300px
 
     Serial port selection prompt.
     ```
@@ -266,7 +263,6 @@ You need to use a Chrome-based browser (Google Chrome, Microsoft Edge, etc.) for
 1. If the connection is successfull you will see the following screen. In the `Beacon Delay` drop down menu select `Infinite`.
 
     ```{figure} ../_images/fc-initialization/esc-config-disable-beacon.png
-    :width: 300px
 
     Set `Beacon Delay` to `Infinite` to disable the beacon sound.
     ```
