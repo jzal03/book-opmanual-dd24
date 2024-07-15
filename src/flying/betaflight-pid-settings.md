@@ -55,13 +55,11 @@ As shown in {numref}`fig-fc-pid-setting-fc-pid-starter`, here is how to set the 
 
 ### Recommended starting values
 
-| Axis  | P   | I   | D   | RC Rate | Super Rate  | Max Vel |
-| ---   | --- | --- | --- | ---     | ---         | ---     |
-| Roll  | 80  | 60  | 75  | 1.00    | 0.00        | 200     |
-| Pitch | 80  | 60  | 75  |         | 0.00        | 200     |
-| Yaw   | 70  | 45  |     | 1.00    | 0.70        | 667     |
-
-In addition, change the `Angle Limit` to 55.
+| Axis  | P   | I   | D   |
+| ---   | --- | --- | --- |
+| Roll  | 80  | 60  | 75  |
+| Pitch | 80  | 60  | 75  |
+| Yaw   | 70  | 45  |     |
 
 Finally, click `Save`.
 
