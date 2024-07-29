@@ -49,7 +49,6 @@ parts:
       maxdepth: 2
       numbered: False
       chapters:
-          - file: software-architecture/introduction
-          - file: software-architecture/reference-frames
           - file: software-architecture/ros
-          - file: software-architecture/nodes
+          - file: software-architecture/architecture-diagram
+          - file: software-architecture/reference-frames
