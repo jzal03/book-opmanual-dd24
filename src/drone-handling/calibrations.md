@@ -83,3 +83,7 @@ Zeroing the yaw defines the new “forward” direction of the drone, and it can
 
 Drone yaw calibration procedure
 ```
+(camera-calib)=
+## Camera calibration
+
+Follow the camera calibration procedure described [in the Duckiebot opmanual](book-opmanual-duckiebot:camera-calib), making sure to select the tab `Duckiedrone` if you need to print a new calibration pattern.
