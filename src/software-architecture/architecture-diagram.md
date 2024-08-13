@@ -3,6 +3,8 @@
 This section elaborates on all the DTPS and ROS nodes that run on the Duckiedrone to enable it to fly autonomously.
 
 ```{figure} ../_images/software-architecture/software-architecture.drawio.png
+:width: 100%
+
 Nodes composing the Duckiedrone autonomous flight stack
 ```
 
