@@ -14,6 +14,16 @@ To make it possible for you to develop your own code on the drone, you need to s
     docker-compose -f /data/autoboot/duckiedrone.yaml rm && dt-autoboot
     ```
 
+1. Update the containers to the latest versions by executing the following commands one at a time:
+
+    ```
+    docker stop dtps ros1-tof driver-tof && docker rm dtps ros1-tof driver-tof
+    docker pull duckietown/dtps-switchboard:release
+    docker pull duckietown/dt-duckiebot-interface:ente-arm64v8
+    docker pull duckietown/dt-ros-interface:ente-arm64v8
+    dt-autoboot
+    ```
+
 1. Clone the repository to your Duckiedrone's SD card and switch to the branch `ente`:
 
     ```shell
