@@ -35,10 +35,10 @@ parts:
       maxdepth: 2
       numbered: False
       chapters:
-          - file: flying/environment-setup
+          - file: preliminaries/environment-setup
           - file: flying/betaflight-pid-settings
           - file: flying/diagnostic
-          - file: preliminaries/flying-your-drone
+          - file: flying/flying-your-drone
 
 
     - caption: Learning Experiences
