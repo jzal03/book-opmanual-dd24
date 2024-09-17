@@ -83,144 +83,68 @@ Explanation of the `dfu-util` command:
 
 ## Connecting to the Flight Controller
 
-1.  Unplug the battery from your drone
-
-    ```{attention}
-    Double-check the battery is unplugged
-    ```
-
-1.  Connect the USB-C cable from your Flight Controller to your base station
-
-1. Identify the `"Connect"` button in the top right corner (right now it will be green as the Flight Controller is not connected yet)
-    ```{figure} ../_images/software-initialization/BFC_connect_button.png
-
-    `"Connect"` button in the top-right corner of Betaflight Configurator
-
-1. Select the correct connection port
-
-    ```{tip}
-    Details might vary depending on available connections on your base station. 
-    
-    The correct port should start with: 
-
-    *   Linux/macOS
-        *   `/dev/tty.usbserial*`
-        *   `/dev/cu.usbserial*` 
-        *   `/dev/ttyUSB*`
-    *   Windows
-        *   `COM*`
-    ```
-1. Leave the baud rate (number) at the default value of `115200`
-
-1.  Press the `“Connect”` button and a `“Setup”` page should greet you with a rendering of your drone (see figure below).
-
-```{figure} ../_images/software-initialization/BFC_setup_screen.png
-
-Betaflight Configurator `"Setup"` page
-```
+Here’s the updated version of the instructions, now including the first step to install QGroundControl on your laptop:
 
 ```{attention}
-Please check below that you have the correct versions of both:
-
-*   Configurator: `10.9.0`
-*   Firmware:   `BTFL 4.3.2`
+Unplug the battery from your drone!
 ```
 
-### Checking the firmware version
+### Installing QGroundControl and Restoring the correct parameters
 
-On the top left of the Betaflight Configurator interface, one could check for the Firmware version. For example, in the figure below, the firmware version of the Flight Controller is `BTFL 4.3.2`.
+By following these steps, you will be able to install QGroundControl, connect to your flight controller via TCP, and restore your vehicle’s parameters from a `.param` file. You can download the correct `.param` file from [this link](https://github.com/duckietown/duckiedrone-ardupilot-driver/blob/99b4b28c950cd4aef546dde394732961a827bbe0/assets/speedybeef405_ardupilot.params?raw=true).
 
-```{figure} ../_images/software-initialization/betaflight_firmware_version.png
 
-Top left of Betaflight Configurator, check Betaflight Configurator version and Flight Controller firmware version here
+1. Install QGroundControl:`
+   - Go to the [QGroundControl website](http://qgroundcontrol.com/) and download the installer for your operating system (Windows, macOS, or Linux).
+   - Follow the installation instructions for your OS:
+     - **Windows**: Run the installer and follow the prompts.
+     - **macOS**: Download the `.dmg` file, open it, and drag the QGroundControl icon into your Applications folder.
+     - **Linux**: Follow the package manager or AppImage instructions provided on the QGroundControl download page.
+   - Once installed, launch QGroundControl.
+
+2. Connect to Your Vehicle via TCP:
+   - Open QGroundControl on your computer.
+   - Go to the **Comm Links** section by clicking on the **Q** application icon in the top left corner.
+   - Select **Add** to create a new communication link.
+   - Choose **TCP Link** from the dropdown.
+   - Set the **Host Address** to `<robot_name>.local` and the **Port** to `5760`.
+   - Click **Connect** to establish the connection with your flight controller.
+
+3. Access the Vehicle Setup:
+   - Once connected, open the menu by clicking on the by clicking on the **Q** application icon in the top left corner and open the **Vehicle Setup** page from the popup menu that appears.
+
+4. Navigate to Parameters:
+   - In the Vehicle Setup menu, select the **Parameters** tab to view the configurable parameters for your vehicle.
+
+5. Load the `.param` File:
+   - In the Parameters screen, click on the **Tools** menu in the top right corner.
+   - Select **Load from file…** from the dropdown menu.
+   - Browse to the location of your `.param` file on your computer, select it, and click **Open**.
+
+6. Apply the Parameters:
+   - QGroundControl will load and apply the parameters from the file to your vehicle. Progress indicators or messages will confirm that the parameters are being applied.
+
+7. Reboot the Vehicle:**
+   - After loading the parameters, it is usually necessary to reboot the flight controller for changes to take effect.
+   - You can reboot the vehicle by selecting **Reboot Vehicle** from the **Tools** menu.
+
+Here is a video summing up how to restore the parameters after having connected to the Flight Controller:
+
+```{vimeo} 1010195551
+:alt-text: Ardupilot
 ```
 
-## Restoring the correct settings
-We will restore the correct settings for the Flight Controller that reflect the setup we have on Duckiedrones (i.e. Flight Controller upside down, ESCs communication protocol, etc.)
+### Additional Tips
 
-The settings for the Flight Controller can be saved and restored through the CLI interface of Betaflight, which is akin to a shell used to interact with the firmware.
+- **Multiple Loads:** Some parameters may require multiple loads until they are all applied correctly.
+- **Check for Errors:** Ensure QGroundControl does not report any errors during the parameter loading process.
 
-We have created a file with the required setup for you, so you will only need to restore it without having to tweak parameters through the Betaflight Configurator.
-
-To do this:
-
-1.  Download [this](https://raw.githubusercontent.com/duckietown/dt-duckiebot-interface/ente/packages/flight_controller_driver/config/bf_SPEEDYBEEF405.config) configuration file.
-
-1.  Open it in the notepad app of your base station
-
-1.  Copy all content of the file from the notepad by simply clicking on the text and using <kbd>CTRL</kbd> + <kbd>A</kbd> or <kbd>CMD</kbd> + <kbd>A</kbd>
-
-1.  Go in the `CLI` tab of Betaflight Configurator
-    ```{figure} ../_images/software-initialization/fc_cli_tab.png
-    :width: 300px
-
-    CLI tab
-    ```
-1.  Paste all the text you previously copied using <kbd>CTRL</kbd> + <kbd>V</kbd> or <kbd>CMD</kbd> + <kbd>V</kbd> in the text field at the bottom (the one with the text  `Write your command here. Press Tab for AutoComplete`).
-    ```{figure} ../_images/software-initialization/fc_cli_interface.png
-
-    CLI interface
-    ```
-1.  Press `Enter` on your keyboard to execute the commands and wait for the shell to finish (it should take a few seconds)
-
-The Flight Controller will now reboot and reconnect.
-
-```{todo}
-Update check
-```
-
-```{admonition} Check
-:class: seealso
-
-In the `setup` tab check that the drone now results facing up when the side of the Flight Controller with the chips faces downward.
-```
-
-(fc_initialization_troubleshooting)=
 ## Troubleshooting
 
 ```{trouble}
-The progress bar turns red and shows `"No response from the bootloader, programming:FAILED"`
+I am having issues following the instructions!
 ---
-This is likely due to the Flight Controller not being in Bootloader mode. Please double check the indicators of that mode in the section above.
-```
+We’re happy to support and to hear your feedback! Please post a question on our StackOverflow, you can find the instructions on how to join it [here](https://duckietown.slack.com/archives/CHHQJ0E0H/p1670874390660429).
 
-````{trouble}
-`"Flashing..."` started, but progress bar turns red with a `"Timeout"` error
----
-<!-- Source: https://betaflight.com/docs/development/usb-flashing#ubuntu -->
-
-Linux requires udev rules to allow write access to USB devices for users. An example shell command to achieve this on Ubuntu is shown here:
-
-```bash
-(echo '# DFU (Internal bootloader for STM32 and AT32 MCUs)'
- echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="2e3c", ATTRS{idProduct}=="df11", MODE="0664", GROUP="plugdev"'
- echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE="0664", GROUP="plugdev"') | sudo tee /etc/udev/rules.d/45-stdfu-permissions.rules > /dev/null
-```
-
-This assigns the device to the plugdev group(a standard group in Ubuntu). To check that your account is in the plugdev group type groups in the shell and ensure plugdev is listed. If not you can add yourself as shown (replacing <username> with your username):
-
-```bash
-sudo usermod -a -G plugdev <username>
-```
-
-**If you have any other operating system** you can take a look at the OS-specific configuration at [this link](https://betaflight.com/docs/development/usb-flashing#ubuntu).
-
-````
-
-````{trouble}
-On Linux, Betaflight Configurator doesn't connect to the Flight Controller and an error `Failed to open serial port` appears in the log 
----
-This is a permission issue to access the serial port of the Flight Controller. 
-First try to run `sudo usermod -a -G dialout <USERNAME> `, replacing <USERNAME> with your base station username; this will add your user to the group that has access to the serial ports. **Reboot** for the change to take effect.
-
-If this doesn't work, the quickest solution is to run `sudo chmod 0777 /dev/tty*` while Betaflight Configurator is open, where `/dev/tty* is the port you're using to connect to the Flight Controller.
-
-This second procedure has to be done each time the Flight Controller is reconnected to the base station.
-
-````
-
-```{trouble}
-Other issues
----
-We’re happy to support! Please contact our hardware team via email: [hardware@duckietown.com](mailto:hardware@duckietown.com)
+You can also contact us via Slack at the following channel: [duckietown-sky-help](https://duckietown.slack.com/archives/CJWNCG667)
 ```
