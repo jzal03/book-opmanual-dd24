@@ -16,108 +16,70 @@
 
 The Flight Controller (FC) implements several low-level behaviors, e.g., stabilizing the Duckiedrone around roll, pitch, and yaw through three different PID controllers. Correctly configuring the Flight Controller is critical for flying safely.  
 
-## Installing Betaflight Configurator (BFC)
-Betaflight Configurator is an app that allows the base station to connect directly to the Flight Controller and access its configuration interface.
+## Installing Dependencies and Flashing Betaflight Firmware
 
-Steps:
+### 1. Install dfu-util and screen:
 
-1.  Download the correct version of Betaflight Configurator v10.9.0 for your OS from [**this link**](https://github.com/betaflight/betaflight-configurator/releases/tag/10.9.0).
+- Connect to the Raspberry Pi through ssh.
+- Update the package list:
 
-1. Install Betaflight Configurator on your system
-
-1. Start Betaflight Configurator on your base station. You should see the below interface.
-
-    ```{figure} ../_images/software-initialization/BFC_welcome_screen.png
-
-    Betaflight Configurator (BFC) `welcome screen`
-    ```
-
-## Flashing the correct firmware
-
-### Updating the Flight Controller firmware (Flashing the Flight Controller)
-
-Flight Controllers might have different versions of firmware (i.e., the software that runs on the Flight Controller microcontroller) out of the factory. Normally, this only needs to be done once initially. Follow this procedure to update your firmware.
-
-```{attention}
-During flashing, do not press the `“Connect”` button in Betaflight Configurator. 
+```bash
+sudo apt update
 ```
 
-Our current target firmware is **BTFL v4.3.2**.
+- Install `dfu-util` and `screen`:
 
-### Prepare for flashing the Flight Controller firmware
-
-```{attention}
-Regardless of the firmware version, if it is the first time setting up the Flight Controller, we recommend performing the below flashing procedure once anyways in order to start from a clean state.
+```bash
+sudo apt install dfu-util screen
 ```
 
-Perform the following 2 steps with the Flight Controller **disconnected**.
+### 2. Connect to the serial Console:
 
-*   In the default Welcome page of Betaflight Configurator, in the left sidebar, please click on the `Firmware Flasher` tab 
-    ```{figure} ../_images/software-initialization/betaflight_flasher.png
+- Make sure your SpeedyBee flight controller is connected to the Raspberry Pi via a USB cable.
+- Identify the serial port your flight controller is connected to by running `ls /dev/ttyACM*`, it's commonly listed as `/dev/ttyACM0`, but it might differ.
 
-    `Firmware Flasher` tab in Betaflight Configurator
+- In the terminal, run the following command to connect to the serial console using `screen`:
+
+    ```bash
+    screen /dev/ttyACM0 115200
     ```
 
-*   Configure the options in the tab as below:
-    ```{figure} ../_images/software-initialization/flasher_parameters.png
-
-    `Firmware Flasher` parameters to set
-    ```
-
-## Flashing the Flight Controller
-
-```{attention}
-Normally, when connected to the base station, the Flight Controller connects in `Normal mode`.
-
-This can be identified by:
-
-*    Having a red LED on the Flight Controller board
-*    Having **no blue blinking** LED on the Flight Controller board
-*    Having an orange LED on the Flight Controller board
+    Replace `/dev/ttyACM0` with the actual serial port of your flight controller if it's different.
 
 
-If this is the case during this section, unplug from base station and try to reactivate `bootloader mode` as detailed below.
+### 3. Entering DFU Mode:
+
+- Once connected through `screen`, press the `#` key on your keyboard to enter the Betaflight command-line interface (CLI).
+- In the Betaflight CLI, type the command `bl` and press enter. This will reboot the board and put it into DFU (Device Firmware Update) mode.
+
+### 4. Download and Flash the Firmware:
+
+Run the following command:
+
+```bash
+wget https://github.com/duckietown/duckiedrone-ardupilot-driver/blob/366b41b08dfdb905e40bb2c91e57c9704a313500/assets/arducopter_with_bl_v4_5_5.bin?raw=true
 ```
 
+- Run `dfu-util` to flash the firmware:
 
-To flash the firmware, we need the Flight Controller to be in `bootloader mode`.
+```bash
+sudo dfu-util -a 0 -s 0x08000000:leave -d 0483:df11 -D arducopter_with_bl_v4_5_5.bin
+```
 
-1. Identify the `boot` button on the Flight Controller to the laptop and press the `Connect` button:
+```{pro-tip}
+Explanation of the `dfu-util` command:
 
-    ```{figure} ../_images/software-initialization/speedybee_boot_button.png
+* `sudo`: Grants administrative privileges to run the command.
+* `dfu-util`: The name of the utility used for flashing firmware.
+* `-a 0`: Selects the first DFU device (adjust if there are multiple).
+* `-s 0x08000000:leave`: Sets the address and size for the new firmware.
+* `-d 0483:df11`: Defines the vendor ID (0483) and product ID (df11) for Betaflight devices.
+* `-D arducopter_with_bl_v4_5_5.bin`: Specifies the filename of the firmware to be flashed.
+```
 
-    `BOOT` button location on the SpeedyBeeF405V3 Flight Controller.
-    ```
- 
-1. Connect the Flight Controller to the laptop while pressing the `boot` button.
+### 5. Exit and Disconnect:
 
-Now that the Flight Controller is in `bootloader mode` you can flash the correct firmware:
-
-1.  In the Betaflight Configurator Firmware Flasher tab, click the `Load Firmware [Cloud]` button in the bottom right.
-
-1.  Depending on your operating system, it might be necessary to configure the OS to detect the board in DFU mode. See the [link here](https://betaflight.com/docs/development/usb-flashing) to find out how for your specific OS.
-
-1.  Click the Flash Firmware button (bottom right) and check the progress bar.
-
-    ```{admonition} Check
-    :class: seealso
-    
-    The progress bar shows: `“Flashing…”` => `“Verifying…”` => `“Programming SUCCESSFUL”`
-    ```
-
-    ```{tip}
-    In case the progress bar turns red, see the [Troubleshooting section below](fc_initialization_troubleshooting)
-    ```
-
-3.  If successful, without needing to reconnect the cable, the Flight Controller should go back to the `Normal mode`.
-
-    ```{admonition} **Check**
-    :class: seealso
-
-    1. Verify the blue blinking LED is back on
-
-    1. Click `“Connect”` and verify the firmware version is correct as detailed below
-    ```
+- The flashing process might take a few minutes. Once finished, the flight controller will reboot.
 
 ## Connecting to the Flight Controller
 
