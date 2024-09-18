@@ -81,3 +81,39 @@ The Optical Flow node computes the optical flow motion vectors, sends them to th
 ### Rigid Transform
 
 This node uses OpenCV to calculate the change in position of the drone using the camera by tracking the features in two consecutive images.
+
+### Topics naming
+
+#### Flight controller node:
+
+Topics:
+
+        ~/flight_controller_node/battery
+
+        ~flight_controller_node/commands
+
+        ~/flight_controller_node/commands/executed
+
+        ~/flight_controller_node/mode/current
+
+Services:
+
+        ~/flight_controller_node/set_mode
+
+        ~/flight_controller_node/arm
+
+        ~/flight_controller_node/calibrate_imu
+
+#### IMU node:
+
+Topics:
+
+        ~/imu_node/data
+
+        ~/imu_node/raw
+
+##### ToF node:
+
+Topics:
+
+        ~/bottom_tof_driver_node/range
