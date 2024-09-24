@@ -83,8 +83,6 @@ Explanation of the `dfu-util` command:
 
 ## Connecting to the Flight Controller
 
-Here’s the updated version of the instructions, now including the first step to install QGroundControl on your laptop:
-
 ```{attention}
 Unplug the battery from your drone!
 ```
