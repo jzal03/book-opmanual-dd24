@@ -81,6 +81,31 @@ Explanation of the `dfu-util` command:
 
 - The flashing process might take a few minutes. Once finished, the flight controller will reboot.
 
+## Starting the drone software stack
+
+Now you will need to start the drone software stack, allowing you to connect to the flight controller from your laptop.
+
+To do so you need to use the Duckietown shell `dts`.
+
+````{attention}
+Make sure that the `dts` on your laptop is:
+
+- Running the `ente` distribution. You can check  by running `dts profile list`
+- Updated to the latest version by running:
+
+   ```bash
+   dts update
+   ````
+```
+
+To start the flight software stack execute the command
+
+   ```bash
+   dts duckiebot update -t duckiedrone --distro=ente -f [ROBOT_NAME]
+   ```
+
+Wait for the command to terminate before proceeding to the next step.
+
 ## Connecting to the Flight Controller
 
 ```{attention}
