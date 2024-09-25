@@ -81,12 +81,38 @@ Explanation of the `dfu-util` command:
 
 - The flashing process might take a few minutes. Once finished, the flight controller will reboot.
 
+## Starting the drone software stack
+
+Now you will need to start the drone software stack, allowing you to connect to the flight controller from your laptop.
+
+To do so you need to use the Duckietown shell `dts`.
+
+````{attention}
+Make sure that the `dts` on your laptop is:
+
+- Running the `ente` distribution. You can check  by running `dts profile list`
+- Updated to the latest version by running:
+
+   ```bash
+   dts update
+   ````
+```
+
+To start the flight software stack execute the command
+
+   ```bash
+   dts duckiebot update -t duckiedrone --distro=ente -f [ROBOT_NAME]
+   ```
+
+Wait for the command to terminate before proceeding to the next step.
+
 ## Connecting to the Flight Controller
 
 ```{attention}
 Unplug the battery from your drone!
 ```
 
+(qgroundcontrol-connection)=
 ### Installing QGroundControl and Restoring the correct parameters
 
 By following these steps, you will be able to install QGroundControl, connect to your flight controller via TCP, and restore your vehicle’s parameters from a `.param` file. You can download the correct `.param` file from [this link](https://github.com/duckietown/duckiedrone-ardupilot-driver/blob/99b4b28c950cd4aef546dde394732961a827bbe0/assets/speedybeef405_ardupilot.params?raw=true).
