@@ -112,6 +112,7 @@ Wait for the command to terminate before proceeding to the next step.
 Unplug the battery from your drone!
 ```
 
+(qgroundcontrol-connection)=
 ### Installing QGroundControl and Restoring the correct parameters
 
 By following these steps, you will be able to install QGroundControl, connect to your flight controller via TCP, and restore your vehicle’s parameters from a `.param` file. You can download the correct `.param` file from [this link](https://github.com/duckietown/duckiedrone-ardupilot-driver/blob/99b4b28c950cd4aef546dde394732961a827bbe0/assets/speedybeef405_ardupilot.params?raw=true).
