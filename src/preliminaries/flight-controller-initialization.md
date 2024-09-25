@@ -66,7 +66,7 @@ wget https://github.com/duckietown/duckiedrone-ardupilot-driver/blob/366b41b08df
 sudo dfu-util -a 0 -s 0x08000000:leave -d 0483:df11 -D arducopter_with_bl_v4_5_5.bin
 ```
 
-```{pro-tip}
+```{tip}
 Explanation of the `dfu-util` command:
 
 * `sudo`: Grants administrative privileges to run the command.
@@ -155,7 +155,6 @@ By following these steps, you will be able to install QGroundControl, connect to
 Here is a video summing up how to restore the parameters after having connected to the Flight Controller:
 
 ```{vimeo} 1010195551
-:alt-text: Ardupilot
 ```
 
 ### Additional Tips

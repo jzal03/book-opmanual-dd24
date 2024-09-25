@@ -43,8 +43,9 @@ Do not interrupt the first boot procedure, e.g., by removing power to the Raspbe
 3.  Networks are typically one of the biggest headaches in robotics. We offer different network configurations to minimize these headaches. If you are not sure which choice to make, the right answer typically is: if you are in a university go for AP mode. If you are at home go for CL mode. In both cases, you need to place the jumper accordingly on your `P7` & `P11` pins before getting started.  
     
     ```{todo}
-    Ditch this warning and update the images for DD24.
+    Ditch this warning and update the images for DD24. (It should be already present on branch `daffy`)
     ```
+
     ```{attention}
     At present AP mode is unstable, we suggest you to use CL mode.
     ```

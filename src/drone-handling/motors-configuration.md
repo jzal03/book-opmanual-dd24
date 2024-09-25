@@ -17,15 +17,13 @@ Now you have to set up the motor spinning direction on the flight controller in 
 * A Flight Controller configured for flight.
 ```
 
-### Steps:
-
-#### 1. Connect Flight Controller to QGroundControl
+## 1. Connect Flight Controller to QGroundControl
     - Connect your SpeedyBee F405 v3 flight controller to your computer using a USB cable.
     - Open QGroundControl.
     - Follow the instructions in the [flight controller initialization](qgroundcontrol-connection) to connect to the flight controller from your laptop.
 
 
-#### 2. Check Motor Outputs
+## 2. Check Motor Outputs
     ```{caution}
     Remove propellers for safety before proceeding with motor testing.
     ```
@@ -56,7 +54,7 @@ Now you have to set up the motor spinning direction on the flight controller in 
             - The motor configuration parameters use numbers (1,2,3,4)
         ```
 
-#### 3. Reverse Motor Direction (if required)
+## 3. Reverse Motor Direction (if required)
 If any motor is spinning in the wrong direction, you'll need to reverse its direction:
    
     - Go to the `Parameters` tab.
@@ -71,11 +69,11 @@ If any motor is spinning in the wrong direction, you'll need to reverse its dire
 
     - Click on `Save` and when prompted reboot the flight controller.
 
-#### 4. Verify Motor Spin Direction
+## 4. Verify Motor Spin Direction
     - After making any changes, retest each motor through the `Motors` tab in QGroundControl to ensure all motors are spinning in the correct direction.
     - Make sure the motor directions match the BetaflightX frame configuration.
 
-#### 5. Save
+## 5. Save
     - Once all motors are spinning in the correct direction, save the settings in QGroundControl.
 
 This completes the setup of the flight controller.
