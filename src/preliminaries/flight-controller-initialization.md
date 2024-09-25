@@ -60,7 +60,7 @@ Run the following command:
 wget https://github.com/duckietown/duckiedrone-ardupilot-driver/blob/366b41b08dfdb905e40bb2c91e57c9704a313500/assets/arducopter_with_bl_v4_5_5.bin?raw=true
 ```
 
-- Run `dfu-util` to flash the firmware:
+Run `dfu-util` to flash the firmware:
 
 ```bash
 sudo dfu-util -a 0 -s 0x08000000:leave -d 0483:df11 -D arducopter_with_bl_v4_5_5.bin
@@ -95,8 +95,8 @@ Make sure that the `dts` on your laptop is:
 
    ```bash
    dts update
-   ````
-```
+   ```
+````
 
 To start the flight software stack execute the command
 
@@ -148,7 +148,7 @@ By following these steps, you will be able to install QGroundControl, connect to
 6. Apply the Parameters:
    - QGroundControl will load and apply the parameters from the file to your vehicle. Progress indicators or messages will confirm that the parameters are being applied.
 
-7. Reboot the Vehicle:**
+7. Reboot the Vehicle:
    - After loading the parameters, it is usually necessary to reboot the flight controller for changes to take effect.
    - You can reboot the vehicle by selecting **Reboot Vehicle** from the **Tools** menu.
 
