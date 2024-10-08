@@ -57,7 +57,7 @@ sudo apt install dfu-util screen
 Run the following command:
 
 ```bash
-wget https://github.com/duckietown/duckiedrone-ardupilot-driver/blob/366b41b08dfdb905e40bb2c91e57c9704a313500/assets/arducopter_with_bl_v4_5_5.bin?raw=true
+wget https://github.com/duckietown/duckiedrone-ardupilot-driver/blob/366b41b08dfdb905e40bb2c91e57c9704a313500/assets/arducopter_with_bl_v4_5_5.bin
 ```
 
 Run `dfu-util` to flash the firmware:
