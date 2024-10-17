@@ -25,3 +25,8 @@ This command will generate the HTML version of the book, which can be accessed i
 If you want your changes to be included in the book, open a pull request.
 
 We appreciate your contributions and feedback!
+
+## Sensors characterization
+
+In the folder `src/sensors_characterization`, you will find a Jupyter notebook and bag files that characterize the sensors on the drone. Additionally, in the same folder, there is a `requirements.txt` file with the dependencies needed to create a virtual environment to execute the notebook.
+
