@@ -39,9 +39,9 @@ Remove propellers for safety before proceeding with motor testing.
 
 - Test each motor by clicking on the individual motor numbers (1, 2, 3, 4). Ensure each motor spins in the correct direction according to the BetaflightX frame diagram:
     
-    - Motor 1 (B): `Clockwise (CW)
-    - Motor 2 (A): `Counterclockwise (CCW)
-    - Motor 3 (C): `Clockwise (CW)
+    - Motor 1 (B): `Clockwise (CW)`
+    - Motor 2 (A): `Counterclockwise (CCW)`
+    - Motor 3 (C): `Clockwise (CW)`
     - Motor 4 (D): `Counterclockwise (CCW)`
 
     ```{figure} ../_images/fc-setup/reference_spinning_direction.png
