@@ -55,7 +55,7 @@ List of devices in DFU mode output by `dfu-util`.
 Run the following command:
 
 ```bash
-wget https://github.com/duckietown/duckiedrone-ardupilot-driver/blob/366b41b08dfdb905e40bb2c91e57c9704a313500/assets/arducopter_with_bl_v4_5_5.bin
+wget https://github.com/duckietown/duckiedrone-ardupilot-driver/blob/69a5482d72d4414c13cd7cde0c382b043074161d/assets/arducopter_with_bl_v4_5_5.bin
 ```
 
 Run `dfu-util` to flash the firmware:
