@@ -33,26 +33,24 @@ sudo apt update
 sudo apt install dfu-util screen
 ```
 
-### 2. Connect to the serial Console:
+### 2. Entering DFU Mode:
 
-- Make sure your SpeedyBee flight controller is connected to the Raspberry Pi via a USB cable.
-- Identify the serial port your flight controller is connected to by running `ls /dev/ttyACM*`, it's commonly listed as `/dev/ttyACM0`, but it might differ.
+- Disconnect the USB cable connecting the Flight Controller to the Raspberry Pi and reconnect it while keeping the BOOT button on the side of the flight controller pressed.\
 
-- In the terminal, run the following command to connect to the serial console using `screen`:
+```{figure} ../_images/fc-setup/speedybee-boot-button.png
 
-    ```bash
-    screen /dev/ttyACM0 115200
-    ```
+SpeedyBee F405v3 BOOT button location.
+```
 
-    Replace `/dev/ttyACM0` with the actual serial port of your flight controller if it's different.
+- After a couple of seconds you can release the BOOT button.
+- Execute the command `sudo dfu-util -l`, you should see a list of devices available to be flashed, as in the following image:
 
+```{figure} ../_images/fc-setup/dfu-util-devices-list.png
 
-### 3. Entering DFU Mode:
+List of devices in DFU mode output by `dfu-util`.
+```
 
-- Once connected through `screen`, press the `#` key on your keyboard to enter the Betaflight command-line interface (CLI).
-- In the Betaflight CLI, type the command `bl` and press enter. This will reboot the board and put it into DFU (Device Firmware Update) mode.
-
-### 4. Download and Flash the Firmware:
+### 3. Download and Flash the Firmware:
 
 Run the following command:
 
@@ -77,7 +75,7 @@ Explanation of the `dfu-util` command:
 * `-D arducopter_with_bl_v4_5_5.bin`: Specifies the filename of the firmware to be flashed.
 ```
 
-### 5. Exit and Disconnect:
+### 4. Exit and Disconnect:
 
 - The flashing process might take a few minutes. Once finished, the flight controller will reboot.
 
